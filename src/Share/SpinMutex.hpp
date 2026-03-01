@@ -22,7 +22,9 @@ public:
 			{
 #ifdef _MSC_VER
 				_mm_pause();
-#else
+#elif defined(__aarch64__)
+				__builtin_arm_yield(); // for ARM64 (M1/M2/M3)
+#elif defined(__i386__) || defined(__x86_64__)
 				__builtin_ia32_pause();
 #endif
 			}

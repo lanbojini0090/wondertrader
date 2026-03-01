@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * \file TraderFemas.cpp
  * \project	WonderTrader
  *
@@ -196,8 +196,8 @@ void TraderFemas::connect()
 
 	if (m_thrdWorker == NULL)
 	{
-		m_strandIO = new boost::asio::io_service::strand(m_asyncIO);
-		boost::asio::io_service::work work(m_asyncIO);
+		m_strandIO = new boost::asio::io_context::strand(m_asyncIO);
+		m_workGuard = std::make_shared<WorkGuard>(boost::asio::make_work_guard(m_asyncIO));
 		m_thrdWorker.reset(new StdThread([this](){
 			while (true)
 			{
@@ -211,7 +211,7 @@ void TraderFemas::connect()
 
 void TraderFemas::disconnect()
 {
-	m_asyncIO.post([this](){
+	boost::asio::post(m_asyncIO, [this](){
 		release();
 	});
 }
@@ -1148,7 +1148,7 @@ const char* TraderFemas::wrapExchg(const char* exchg)
 
 void TraderFemas::triggerQuery()
 {
-	m_strandIO->post([this](){
+	boost::asio::post(*m_strandIO, [this](){
 		if (m_queQuery.empty() || m_bInQuery)
 			return;
 
@@ -1156,7 +1156,7 @@ void TraderFemas::triggerQuery()
 		if (curTime - m_lastQryTime < 1000)
 		{
 			std::this_thread::sleep_for(std::chrono::milliseconds(50));
-			m_strandIO->post([this](){
+			boost::asio::post(*m_strandIO, [this](){
 				triggerQuery();
 			});
 			return;

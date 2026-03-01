@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <thread>
 
 class CpuHelper
@@ -27,6 +27,13 @@ public:
 #include <sched.h>
 #include <unistd.h>
 #include <string.h>
+
+#ifdef __APPLE__
+	static bool bind_core(uint32_t i)
+	{
+		return false;
+	}
+#else
 	static bool bind_core(uint32_t i)
 	{
 		int cores = get_cpu_cores();
@@ -38,5 +45,6 @@ public:
 		CPU_SET(i, &mask);
 		return (pthread_setaffinity_np(pthread_self(), sizeof(mask), &mask) >= 0);
 	}
+#endif
 #endif
 };

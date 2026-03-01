@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * \file EventCaster.h
  * \project	WonderTrader
  *
@@ -9,7 +9,7 @@
  */
 #pragma once
 
-#include <boost/asio/io_service.hpp>
+#include <boost/asio.hpp>
 
 #include "../Includes/WTSMarcos.h"
 #include "../Includes/WTSObject.hpp"
@@ -63,7 +63,7 @@ private:
 	FuncRegCallbacks	_register;
 
 	bool			_stopped;
-	boost::asio::io_service		_asyncio;
+	boost::asio::io_context		_asyncio;
 	StdThreadPtr				_worker;
 };
 

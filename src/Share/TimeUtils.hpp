@@ -99,9 +99,9 @@ public:
 
 		char str[64] = {0};
 		if(bIncludeMilliSec)
-			sprintf(str, "%02d:%02d:%02d,%03d", tNow->tm_hour, tNow->tm_min, tNow->tm_sec, millitm);
+			snprintf(str, sizeof(str), "%02d:%02d:%02d,%03d", tNow->tm_hour, tNow->tm_min, tNow->tm_sec, millitm);
 		else
-			sprintf(str, "%02d:%02d:%02d", tNow->tm_hour, tNow->tm_min, tNow->tm_sec);
+			snprintf(str, sizeof(str), "%02d:%02d:%02d", tNow->tm_hour, tNow->tm_min, tNow->tm_sec);
 		return str;
 	}
 
@@ -240,10 +240,10 @@ public:
 #endif
 		char tm_buf[64] = {'\0'};
 		if (msec > 0) //是否有毫秒
-		   sprintf(tm_buf,"%4d%02d%02d%02d%02d%02d.%03d",t.tm_year+1900, t.tm_mon+1, t.tm_mday,
+		   snprintf(tm_buf, sizeof(tm_buf), "%4d%02d%02d%02d%02d%02d.%03d",t.tm_year+1900, t.tm_mon+1, t.tm_mday,
 			t.tm_hour, t.tm_min, t.tm_sec, msec);
 		else 
-		   sprintf(tm_buf,"%4d%02d%02d%02d%02d%02d",t.tm_year+1900, t.tm_mon+1, t.tm_mday,
+		   snprintf(tm_buf, sizeof(tm_buf), "%4d%02d%02d%02d%02d%02d",t.tm_year+1900, t.tm_mon+1, t.tm_mday,
 			t.tm_hour, t.tm_min, t.tm_sec);
 		return tm_buf;
 	};
@@ -393,7 +393,7 @@ public:
 			static char buff[1024];
 			uint32_t length = (uint32_t)strftime(buff, 1023, sfmt, &t);
 			if (hasMilliSec)
-				sprintf(buff + length, ",%03u", _msec);
+				snprintf(buff + length, sizeof(buff) - length, ",%03u", _msec);
 			return buff;
 		}
 

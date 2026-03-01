@@ -35,6 +35,7 @@ ELSE(GNUCC)
 			dl
 			pthread
 			nanomsg
+			fmt
 		)
 	ENDIF()
 ENDIF()

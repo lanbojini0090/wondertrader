@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "../build_x64/bin/TestUnits/TestUnits"
+  "../build_x64/bin/TestUnits/TestUnits.pdb"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-death-test.cc.o"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-death-test.cc.o.d"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-filepath.cc.o"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-filepath.cc.o.d"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-port.cc.o"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-port.cc.o.d"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-printers.cc.o"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-printers.cc.o.d"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-test-part.cc.o"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-test-part.cc.o.d"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-typed-test.cc.o"
+  "CMakeFiles/TestUnits.dir/gtest/gtest-typed-test.cc.o.d"
+  "CMakeFiles/TestUnits.dir/gtest/gtest.cc.o"
+  "CMakeFiles/TestUnits.dir/gtest/gtest.cc.o.d"
+  "CMakeFiles/TestUnits.dir/main.cpp.o"
+  "CMakeFiles/TestUnits.dir/main.cpp.o.d"
+  "CMakeFiles/TestUnits.dir/test_codehelper.cpp.o"
+  "CMakeFiles/TestUnits.dir/test_codehelper.cpp.o.d"
+  "CMakeFiles/TestUnits.dir/test_fastestmap.cpp.o"
+  "CMakeFiles/TestUnits.dir/test_fastestmap.cpp.o.d"
+  "CMakeFiles/TestUnits.dir/test_fmt.cpp.o"
+  "CMakeFiles/TestUnits.dir/test_fmt.cpp.o.d"
+  "CMakeFiles/TestUnits.dir/test_kvcache.cpp.o"
+  "CMakeFiles/TestUnits.dir/test_kvcache.cpp.o.d"
+  "CMakeFiles/TestUnits.dir/test_lmdb.cpp.o"
+  "CMakeFiles/TestUnits.dir/test_lmdb.cpp.o.d"
+  "CMakeFiles/TestUnits.dir/test_object_pool.cpp.o"
+  "CMakeFiles/TestUnits.dir/test_object_pool.cpp.o.d"
+  "CMakeFiles/TestUnits.dir/test_session.cpp.o"
+  "CMakeFiles/TestUnits.dir/test_session.cpp.o.d"
+  "CMakeFiles/TestUnits.dir/test_shm.cpp.o"
+  "CMakeFiles/TestUnits.dir/test_shm.cpp.o.d"
+  "CMakeFiles/TestUnits.dir/test_utils.cpp.o"
+  "CMakeFiles/TestUnits.dir/test_utils.cpp.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/TestUnits.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

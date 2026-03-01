@@ -10,7 +10,7 @@
 #pragma once
 #include <stdint.h>
 #include <atomic>
-#include <boost/smart_ptr/detail/spinlock.hpp>
+// #include <boost/smart_ptr/detail/spinlock.hpp>
 
 #include "WTSMarcos.h"
 #include "../Share/ObjectPool.hpp"

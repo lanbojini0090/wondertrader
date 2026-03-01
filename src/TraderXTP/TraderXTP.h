@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * \file TraderXTP.h
  * \project	WonderTrader
  *
@@ -10,7 +10,8 @@
 #pragma once
 
 #include <stdint.h>
-#include <boost/asio/io_service.hpp>
+//#include <boost/asio/io_service.hpp>
+#include <boost/asio.hpp>
 
 #include "../API/XTP2.2.32.2/xtp_trader_api.h"
 
@@ -136,11 +137,11 @@ private:
 	uint32_t		_tradingday;
 	std::atomic<uint32_t>		_reqid;
 	std::atomic<uint32_t>		_ordref;		//报单引用
-
-	boost::asio::io_service		_asyncio;
+	
+	boost::asio::io_context		_asyncio;
 	StdThreadPtr				_thrd_worker;
-	typedef std::shared_ptr<boost::asio::io_service::work> BoostWorkerPtr;
-	BoostWorkerPtr				_worker;
+	typedef boost::asio::executor_work_guard<boost::asio::io_context::executor_type> WorkGuard;
+	std::shared_ptr<WorkGuard>				_work_guard;
 
 	DllHandle		m_hInstXTP;
 	typedef XTP::API::TraderApi* (*XTPCreator)(uint8_t, const char*, XTP_LOG_LEVEL);

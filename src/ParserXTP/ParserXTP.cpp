@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * \file ParserXTP.cpp
  * \project	WonderTrader
  *
@@ -144,7 +144,7 @@ bool ParserXTP::connect()
 	if (_thrd_worker == NULL)
 	{
 		//boost::asio::io_service::work work(_asyncio);
-		_worker.reset(new boost::asio::io_service::work(_asyncio));
+		_workGuard = std::make_shared<WorkGuard>(boost::asio::make_work_guard(_asyncio));
 		_thrd_worker.reset(new StdThread([this]() {
 			while (true)
 			{
@@ -186,7 +186,7 @@ void ParserXTP::OnDisconnected(int nReason)
 		m_sink->handleEvent(WPE_Close, 0);
 	}
 
-	_asyncio.post([this]() {
+	boost::asio::post(_asyncio, [this]() {
 		write_log(m_sink, LL_WARN, "[ParserXTP] Connection lost, relogin in 2 seconds...");
 		std::this_thread::sleep_for(std::chrono::seconds(2));
 		DoLogin();
@@ -455,7 +455,7 @@ void ParserXTP::DoLogin()
 			auto error_info = m_pUserAPI->GetApiLastError();
 			if(iResult == -1)
 			{
-				_asyncio.post([this, iResult] {
+				boost::asio::post(_asyncio, [this, iResult] {
 					m_sink->handleEvent(WPE_Connect, iResult);
 				});
 
@@ -464,7 +464,7 @@ void ParserXTP::DoLogin()
 			else
 			{
 				m_sink->handleEvent(WPE_Connect, 0);
-				_asyncio.post([this, iResult] {
+				boost::asio::post(_asyncio, [this, iResult] {
 					m_sink->handleEvent(WPE_Connect, 0);
 				});
 
@@ -475,7 +475,7 @@ void ParserXTP::DoLogin()
 	else
 	{
 		m_uTradingDate = strToTime(m_pUserAPI->GetTradingDay());
-		_asyncio.post([this] {
+		boost::asio::post(_asyncio, [this] {
 			if (m_sink)
 			{
 				m_sink->handleEvent(WPE_Connect, 0);

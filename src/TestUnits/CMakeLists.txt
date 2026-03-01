@@ -18,7 +18,7 @@ SET(LIBS
 IF (MSVC)
 ELSE(GNUCC)
     LIST(APPEND LIBS pthread boost_filesystem)
-	IF(WIN32)
+	IF(WIN32 OR APPLE)
 		LIST(APPEND LIBS iconv)
 	ENDIF()
 ENDIF()

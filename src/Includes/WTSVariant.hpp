@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * \file WTSVariant.hpp
  * \project	WonderTrader
  *
@@ -22,8 +22,8 @@
 #define INT64_FMT	"%I64d"
 #define UINT64_FMT	"%I64u"
 #else
-#define INT64_FMT	"%ld"
-#define UINT64_FMT	"%lu"
+#define INT64_FMT	"%lld"
+#define UINT64_FMT	"%llu"
 #endif
 
 
@@ -65,7 +65,7 @@ private:
 		WTSVariant* ret = new WTSVariant();
 		ret->_type = VT_Int32;
 		char s[32] = { 0 };
-		sprintf(s, "%d", i32);
+		snprintf(s, sizeof(s), "%d", i32);
 		ret->_value._string = new std::string(s);
 		return ret;
 	}
@@ -75,7 +75,7 @@ private:
 		WTSVariant* ret = new WTSVariant();
 		ret->_type = VT_Uint32;
 		char s[32] = { 0 };
-		sprintf(s, "%u", u32);
+		snprintf(s, sizeof(s), "%u", u32);
 		ret->_value._string = new std::string(s);
 		return ret;
 	}
@@ -85,7 +85,7 @@ private:
 		WTSVariant* ret = new WTSVariant();
 		ret->_type = VT_Int64;
 		char s[32] = { 0 };
-		sprintf(s, INT64_FMT, i64);
+		snprintf(s, sizeof(s), INT64_FMT, i64);
 		ret->_value._string = new std::string(s);
 		return ret;
 	}
@@ -95,7 +95,7 @@ private:
 		WTSVariant* ret = new WTSVariant();
 		ret->_type = VT_Uint64;
 		char s[32] = { 0 };
-		sprintf(s, UINT64_FMT, u64);
+		snprintf(s, sizeof(s), UINT64_FMT, u64);
 		ret->_value._string = new std::string(s);
 		return ret;
 	}
@@ -105,7 +105,7 @@ private:
 		WTSVariant* ret = new WTSVariant();
 		ret->_type = VT_Real;
 		char s[32] = { 0 };
-		sprintf(s, "%.10f", _real);
+		snprintf(s, sizeof(s), "%.10f", _real);
 		ret->_value._string = new std::string(s);
 		return ret;
 	}

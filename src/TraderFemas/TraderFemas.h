@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * \file TraderFemas.h
  * \project	WonderTrader
  *
@@ -19,8 +19,7 @@
 #include <stdint.h>
 #include <atomic>
 
-#include <boost/asio/io_service.hpp>
-#include <boost/asio/strand.hpp>
+#include <boost/asio.hpp>
 
 #include "../Includes/WTSTypes.h"
 #include "../Includes/ITraderApi.h"
@@ -226,9 +225,11 @@ protected:
 	bool						m_bQryOnline;
 	bool						m_bStopped;
 
-	boost::asio::io_service		m_asyncIO;
-	boost::asio::io_service::strand*	m_strandIO;
+	boost::asio::io_context		m_asyncIO;
+	boost::asio::io_context::strand*	m_strandIO;
 	StdThreadPtr				m_thrdWorker;
+	typedef boost::asio::executor_work_guard<boost::asio::io_context::executor_type> WorkGuard;
+	std::shared_ptr<WorkGuard>	m_workGuard;
 
 	typedef std::queue<CommonExecuter>	QueryQue;
 	QueryQue				m_queQuery;

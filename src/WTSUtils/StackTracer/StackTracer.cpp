@@ -73,7 +73,7 @@ void print_stack_trace(TracerLogCallback cb) {
 			char *ret = abi::__cxa_demangle(begin_name, funcname, &funcnamesize, &status);
 			cb(ret);
 			char buf[256] = { 0 };
-			sprintf(buf, "%30s ( %40s  + %6s) %s", symbollist[i], status == 0 ? ret : begin_name, begin_offset ? begin_offset : "", end_offset);
+			snprintf(buf, sizeof(buf), "%30s ( %40s  + %6s) %s", symbollist[i], status == 0 ? ret : begin_name, begin_offset ? begin_offset : "", end_offset);
 			cb(buf);
 		} else {
 			// couldn't parse the line? print the whole line.

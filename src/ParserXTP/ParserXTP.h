@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * \file ParserXTP.h
  * \project	WonderTrader
  *
@@ -8,7 +8,8 @@
  * \brief 
  */
 #pragma once
-#include <boost/asio/io_service.hpp>
+//#include <boost/asio/io_service.hpp>
+#include <boost/asio.hpp>
 #include "../Includes/IParserApi.h"
 #include "../API/XTP2.2.32.2/xtp_quote_api.h"
 
@@ -121,9 +122,9 @@ private:
 	//typedef CUstpFtdcMduserApi* (*FemasCreator)(const char *);
 	XTPCreater		m_funcCreator;
 
-	boost::asio::io_service		_asyncio;
+	boost::asio::io_context		_asyncio;
 	StdThreadPtr				_thrd_worker;
-	typedef std::shared_ptr<boost::asio::io_service::work> BoostWorkerPtr;
-	BoostWorkerPtr				_worker;
+	typedef boost::asio::executor_work_guard<boost::asio::io_context::executor_type> WorkGuard;
+	std::shared_ptr<WorkGuard>	_workGuard;
 };
 

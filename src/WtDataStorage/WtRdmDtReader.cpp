@@ -1,4 +1,4 @@
-﻿#include "WtRdmDtReader.h"
+#include "WtRdmDtReader.h"
 
 #include "../Includes/WTSVariant.hpp"
 #include "../Share/TimeUtils.hpp"
@@ -1782,7 +1782,7 @@ WTSKlineSlice* WtRdmDtReader::readKlineSliceByRange(const char* stdCode, WTSKlin
 	WTSCommodityInfo* commInfo = _base_data_mgr->getCommodity(cInfo._exchg, cInfo._product);
 	const char* stdPID = commInfo->getFullPid();
 
-	std::string key = fmt::format("{}#{}", stdCode, period);
+	std::string key = fmt::format("{}#{}", stdCode, (int)period);
 	auto it = _bars_cache.find(key);
 	bool bHasHisData = false;
 	if (it == _bars_cache.end())
@@ -2213,7 +2213,7 @@ WTSKlineSlice* WtRdmDtReader::readKlineSliceByCount(const char* stdCode, WTSKlin
 	WTSCommodityInfo* commInfo = _base_data_mgr->getCommodity(cInfo._exchg, cInfo._product);
 	const char* stdPID = commInfo->getFullPid();
 
-	std::string key = fmtutil::format("{}#{}", stdCode, period);
+	std::string key = fmtutil::format("{}#{}", stdCode, (int)period);
 	auto it = _bars_cache.find(key);
 	bool bHasHisData = false;
 	if (it == _bars_cache.end())

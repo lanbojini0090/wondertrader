@@ -1,4 +1,4 @@
-﻿#include "WtDataReader.h"
+#include "WtDataReader.h"
 
 #include "../Includes/WTSVariant.hpp"
 #include "../Share/TimeUtils.hpp"
@@ -1544,7 +1544,8 @@ WTSKlineSlice* WtDataReader::readKlineSlice(const char* stdCode, WTSKlinePeriod 
 	const char* stdPID = cInfo.stdCommID();
 
 	thread_local static char key[64] = { 0 };
-	fmtutil::format_to(key, "{}#{}", stdCode, period);
+	fmtutil::format_to(key, "{}#{}", stdCode, (int)period);
+
 	auto it = _bars_cache.find(key);
 	bool bHasHisData = false;
 	if (it == _bars_cache.end())

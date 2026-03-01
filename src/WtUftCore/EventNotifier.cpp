@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * \file EventCaster.cpp
  * \project	WonderTrader
  *
@@ -94,7 +94,6 @@ bool EventNotifier::init(WTSVariant* cfg)
 
 	if (_worker == NULL)
 	{
-		boost::asio::io_service::work work(_asyncio);
 		_worker.reset(new StdThread([this]() {
 			while (!_stopped)
 			{
@@ -115,7 +114,7 @@ void EventNotifier::notify_log(const char* tag, const char* message)
 
 	std::string strTag = tag;
 	std::string strMsg = message;
-	_asyncio.post([this, strTag, strMsg]() {
+	boost::asio::post(_asyncio, [this, strTag, strMsg]() {
 		std::string data;
 		{
 			rj::Document root(rj::kObjectType);
@@ -143,7 +142,7 @@ void EventNotifier::notify_event(const char* message)
 		return;
 
 	std::string strMsg = message;
-	_asyncio.post([this, strMsg]() {
+	boost::asio::post(_asyncio, [this, strMsg]() {
 		std::string data;
 		{
 			rj::Document root(rj::kObjectType);
@@ -170,7 +169,7 @@ void EventNotifier::notify(const char* trader, const char* message)
 
 	std::string strTrader = trader;
 	std::string strMsg = message;
-	_asyncio.post([this, strTrader, strMsg]() {
+	boost::asio::post(_asyncio, [this, strTrader, strMsg]() {
 		std::string data;
 		{
 			rj::Document root(rj::kObjectType);
@@ -199,7 +198,7 @@ void EventNotifier::notify(const char* trader, uint32_t localid, const char* std
 	std::string strTrader = trader;
 	std::string strCode = stdCode;
 	trdInfo->retain();
-	_asyncio.post([this, strTrader, strCode, localid, trdInfo]() {
+	boost::asio::post(_asyncio, [this, strTrader, strCode, localid, trdInfo]() {
 		std::string data;
 		tradeToJson(strTrader.c_str(), localid, strCode.c_str(), trdInfo, data);
 		if (_publisher)
@@ -216,7 +215,7 @@ void EventNotifier::notify(const char* trader, uint32_t localid, const char* std
 	std::string strTrader = trader;
 	std::string strCode = stdCode;
 	ordInfo->retain();
-	_asyncio.post([this, strTrader, strCode, localid, ordInfo]() {
+	boost::asio::post(_asyncio, [this, strTrader, strCode, localid, ordInfo]() {
 		std::string data;
 		orderToJson(strTrader.c_str(), localid, strCode.c_str(), ordInfo, data);
 		if (_publisher)
