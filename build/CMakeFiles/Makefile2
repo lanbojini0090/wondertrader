@@ -93,6 +93,7 @@ all: TraderFemas/all
 all: TraderMocker/all
 all: TraderXTP/all
 all: TraderYD/all
+all: WtCtaStraFact/all
 all: WtExeFact/all
 all: WtRiskMonFact/all
 all: WtMsgQue/all
@@ -147,6 +148,7 @@ codegen: TraderFemas/codegen
 codegen: TraderMocker/codegen
 codegen: TraderXTP/codegen
 codegen: TraderYD/codegen
+codegen: WtCtaStraFact/codegen
 codegen: WtExeFact/codegen
 codegen: WtRiskMonFact/codegen
 codegen: WtMsgQue/codegen
@@ -201,6 +203,7 @@ preinstall: TraderFemas/preinstall
 preinstall: TraderMocker/preinstall
 preinstall: TraderXTP/preinstall
 preinstall: TraderYD/preinstall
+preinstall: WtCtaStraFact/preinstall
 preinstall: WtExeFact/preinstall
 preinstall: WtRiskMonFact/preinstall
 preinstall: WtMsgQue/preinstall
@@ -255,6 +258,7 @@ clean: TraderFemas/clean
 clean: TraderMocker/clean
 clean: TraderXTP/clean
 clean: TraderYD/clean
+clean: WtCtaStraFact/clean
 clean: WtExeFact/clean
 clean: WtRiskMonFact/clean
 clean: WtMsgQue/clean
@@ -906,6 +910,25 @@ WtCore/clean: WtCore/CMakeFiles/WtCore.dir/clean
 .PHONY : WtCore/clean
 
 #=============================================================================
+# Directory level rules for directory WtCtaStraFact
+
+# Recursive "all" directory target.
+WtCtaStraFact/all: WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/all
+.PHONY : WtCtaStraFact/all
+
+# Recursive "codegen" directory target.
+WtCtaStraFact/codegen: WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/codegen
+.PHONY : WtCtaStraFact/codegen
+
+# Recursive "preinstall" directory target.
+WtCtaStraFact/preinstall:
+.PHONY : WtCtaStraFact/preinstall
+
+# Recursive "clean" directory target.
+WtCtaStraFact/clean: WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/clean
+.PHONY : WtCtaStraFact/clean
+
+#=============================================================================
 # Directory level rules for directory WtDataStorage
 
 # Recursive "all" directory target.
@@ -1254,12 +1277,12 @@ WtUftStraFact/clean: WtUftStraFact/CMakeFiles/WtUftStraFact.dir/clean
 WTSUtils/CMakeFiles/WTSUtils.dir/all:
 	$(MAKE) $(MAKESILENT) -f WTSUtils/CMakeFiles/WTSUtils.dir/build.make WTSUtils/CMakeFiles/WTSUtils.dir/depend
 	$(MAKE) $(MAKESILENT) -f WTSUtils/CMakeFiles/WTSUtils.dir/build.make WTSUtils/CMakeFiles/WTSUtils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51 "Built target WTSUtils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50 "Built target WTSUtils"
 .PHONY : WTSUtils/CMakeFiles/WTSUtils.dir/all
 
 # Build rule for subdir invocation for target.
 WTSUtils/CMakeFiles/WTSUtils.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WTSUtils/CMakeFiles/WTSUtils.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WTSUtils/CMakeFiles/WTSUtils.dir/rule
@@ -1271,7 +1294,7 @@ WTSUtils: WTSUtils/CMakeFiles/WTSUtils.dir/rule
 # codegen rule for target.
 WTSUtils/CMakeFiles/WTSUtils.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WTSUtils/CMakeFiles/WTSUtils.dir/build.make WTSUtils/CMakeFiles/WTSUtils.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51 "Finished codegen for target WTSUtils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50 "Finished codegen for target WTSUtils"
 .PHONY : WTSUtils/CMakeFiles/WTSUtils.dir/codegen
 
 # clean rule for target.
@@ -1286,12 +1309,12 @@ WTSUtils/CMakeFiles/WTSUtils.dir/clean:
 WTSTools/CMakeFiles/WTSTools.dir/all:
 	$(MAKE) $(MAKESILENT) -f WTSTools/CMakeFiles/WTSTools.dir/build.make WTSTools/CMakeFiles/WTSTools.dir/depend
 	$(MAKE) $(MAKESILENT) -f WTSTools/CMakeFiles/WTSTools.dir/build.make WTSTools/CMakeFiles/WTSTools.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=27,28 "Built target WTSTools"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=26,27,28 "Built target WTSTools"
 .PHONY : WTSTools/CMakeFiles/WTSTools.dir/all
 
 # Build rule for subdir invocation for target.
 WTSTools/CMakeFiles/WTSTools.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WTSTools/CMakeFiles/WTSTools.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WTSTools/CMakeFiles/WTSTools.dir/rule
@@ -1303,7 +1326,7 @@ WTSTools: WTSTools/CMakeFiles/WTSTools.dir/rule
 # codegen rule for target.
 WTSTools/CMakeFiles/WTSTools.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WTSTools/CMakeFiles/WTSTools.dir/build.make WTSTools/CMakeFiles/WTSTools.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=27,28 "Finished codegen for target WTSTools"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=26,27,28 "Finished codegen for target WTSTools"
 .PHONY : WTSTools/CMakeFiles/WTSTools.dir/codegen
 
 # clean rule for target.
@@ -1323,7 +1346,7 @@ CTPLoader/CMakeFiles/CTPLoader.dir/all: WTSUtils/CMakeFiles/WTSUtils.dir/all
 
 # Build rule for subdir invocation for target.
 CTPLoader/CMakeFiles/CTPLoader.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CTPLoader/CMakeFiles/CTPLoader.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : CTPLoader/CMakeFiles/CTPLoader.dir/rule
@@ -1355,7 +1378,7 @@ CTPOptLoader/CMakeFiles/CTPOptLoader.dir/all: WTSUtils/CMakeFiles/WTSUtils.dir/a
 
 # Build rule for subdir invocation for target.
 CTPOptLoader/CMakeFiles/CTPOptLoader.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CTPOptLoader/CMakeFiles/CTPOptLoader.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : CTPOptLoader/CMakeFiles/CTPOptLoader.dir/rule
@@ -1389,7 +1412,7 @@ LoaderRunner/CMakeFiles/LoaderRunner.dir/all: WtBtCore/CMakeFiles/WtBtCore.dir/a
 
 # Build rule for subdir invocation for target.
 LoaderRunner/CMakeFiles/LoaderRunner.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 29
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LoaderRunner/CMakeFiles/LoaderRunner.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : LoaderRunner/CMakeFiles/LoaderRunner.dir/rule
@@ -1640,7 +1663,7 @@ ParserXeleSkt/CMakeFiles/ParserXeleSkt.dir/clean:
 WtDataStorage/CMakeFiles/WtDataStorage.dir/all: WTSUtils/CMakeFiles/WTSUtils.dir/all
 	$(MAKE) $(MAKESILENT) -f WtDataStorage/CMakeFiles/WtDataStorage.dir/build.make WtDataStorage/CMakeFiles/WtDataStorage.dir/depend
 	$(MAKE) $(MAKESILENT) -f WtDataStorage/CMakeFiles/WtDataStorage.dir/build.make WtDataStorage/CMakeFiles/WtDataStorage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=69 "Built target WtDataStorage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=69,70 "Built target WtDataStorage"
 .PHONY : WtDataStorage/CMakeFiles/WtDataStorage.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1657,7 +1680,7 @@ WtDataStorage: WtDataStorage/CMakeFiles/WtDataStorage.dir/rule
 # codegen rule for target.
 WtDataStorage/CMakeFiles/WtDataStorage.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WtDataStorage/CMakeFiles/WtDataStorage.dir/build.make WtDataStorage/CMakeFiles/WtDataStorage.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=69 "Finished codegen for target WtDataStorage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=69,70 "Finished codegen for target WtDataStorage"
 .PHONY : WtDataStorage/CMakeFiles/WtDataStorage.dir/codegen
 
 # clean rule for target.
@@ -1672,12 +1695,12 @@ WtDataStorage/CMakeFiles/WtDataStorage.dir/clean:
 WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/all: WTSUtils/CMakeFiles/WTSUtils.dir/all
 	$(MAKE) $(MAKESILENT) -f WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/build.make WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/depend
 	$(MAKE) $(MAKESILENT) -f WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/build.make WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=70,71 "Built target WtDataStorageAD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=71 "Built target WtDataStorageAD"
 .PHONY : WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/all
 
 # Build rule for subdir invocation for target.
 WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/rule
@@ -1689,7 +1712,7 @@ WtDataStorageAD: WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/rule
 # codegen rule for target.
 WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/build.make WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=70,71 "Finished codegen for target WtDataStorageAD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=71 "Finished codegen for target WtDataStorageAD"
 .PHONY : WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/codegen
 
 # clean rule for target.
@@ -1704,12 +1727,12 @@ WtDataStorageAD/CMakeFiles/WtDataStorageAD.dir/clean:
 WtDtCore/CMakeFiles/WtDtCore.dir/all:
 	$(MAKE) $(MAKESILENT) -f WtDtCore/CMakeFiles/WtDtCore.dir/build.make WtDtCore/CMakeFiles/WtDtCore.dir/depend
 	$(MAKE) $(MAKESILENT) -f WtDtCore/CMakeFiles/WtDtCore.dir/build.make WtDtCore/CMakeFiles/WtDtCore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=72,73,74 "Built target WtDtCore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=72,73,74,75 "Built target WtDtCore"
 .PHONY : WtDtCore/CMakeFiles/WtDtCore.dir/all
 
 # Build rule for subdir invocation for target.
 WtDtCore/CMakeFiles/WtDtCore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtDtCore/CMakeFiles/WtDtCore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtDtCore/CMakeFiles/WtDtCore.dir/rule
@@ -1721,7 +1744,7 @@ WtDtCore: WtDtCore/CMakeFiles/WtDtCore.dir/rule
 # codegen rule for target.
 WtDtCore/CMakeFiles/WtDtCore.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WtDtCore/CMakeFiles/WtDtCore.dir/build.make WtDtCore/CMakeFiles/WtDtCore.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=72,73,74 "Finished codegen for target WtDtCore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=72,73,74,75 "Finished codegen for target WtDtCore"
 .PHONY : WtDtCore/CMakeFiles/WtDtCore.dir/codegen
 
 # clean rule for target.
@@ -1737,12 +1760,12 @@ WtDtHelper/CMakeFiles/WtDtHelper.dir/all: WTSUtils/CMakeFiles/WTSUtils.dir/all
 WtDtHelper/CMakeFiles/WtDtHelper.dir/all: WTSTools/CMakeFiles/WTSTools.dir/all
 	$(MAKE) $(MAKESILENT) -f WtDtHelper/CMakeFiles/WtDtHelper.dir/build.make WtDtHelper/CMakeFiles/WtDtHelper.dir/depend
 	$(MAKE) $(MAKESILENT) -f WtDtHelper/CMakeFiles/WtDtHelper.dir/build.make WtDtHelper/CMakeFiles/WtDtHelper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=75 "Built target WtDtHelper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Built target WtDtHelper"
 .PHONY : WtDtHelper/CMakeFiles/WtDtHelper.dir/all
 
 # Build rule for subdir invocation for target.
 WtDtHelper/CMakeFiles/WtDtHelper.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtDtHelper/CMakeFiles/WtDtHelper.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtDtHelper/CMakeFiles/WtDtHelper.dir/rule
@@ -1754,7 +1777,7 @@ WtDtHelper: WtDtHelper/CMakeFiles/WtDtHelper.dir/rule
 # codegen rule for target.
 WtDtHelper/CMakeFiles/WtDtHelper.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WtDtHelper/CMakeFiles/WtDtHelper.dir/build.make WtDtHelper/CMakeFiles/WtDtHelper.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=75 "Finished codegen for target WtDtHelper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Finished codegen for target WtDtHelper"
 .PHONY : WtDtHelper/CMakeFiles/WtDtHelper.dir/codegen
 
 # clean rule for target.
@@ -1776,7 +1799,7 @@ WtDtPorter/CMakeFiles/WtDtPorter.dir/all: WtDtCore/CMakeFiles/WtDtCore.dir/all
 
 # Build rule for subdir invocation for target.
 WtDtPorter/CMakeFiles/WtDtPorter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 31
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtDtPorter/CMakeFiles/WtDtPorter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtDtPorter/CMakeFiles/WtDtPorter.dir/rule
@@ -1838,7 +1861,7 @@ QuoteFactory/CMakeFiles/QuoteFactory.dir/all: WTSTools/CMakeFiles/WTSTools.dir/a
 QuoteFactory/CMakeFiles/QuoteFactory.dir/all: WtDtCore/CMakeFiles/WtDtCore.dir/all
 	$(MAKE) $(MAKESILENT) -f QuoteFactory/CMakeFiles/QuoteFactory.dir/build.make QuoteFactory/CMakeFiles/QuoteFactory.dir/depend
 	$(MAKE) $(MAKESILENT) -f QuoteFactory/CMakeFiles/QuoteFactory.dir/build.make QuoteFactory/CMakeFiles/QuoteFactory.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=9 "Built target QuoteFactory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Built target QuoteFactory"
 .PHONY : QuoteFactory/CMakeFiles/QuoteFactory.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1855,7 +1878,7 @@ QuoteFactory: QuoteFactory/CMakeFiles/QuoteFactory.dir/rule
 # codegen rule for target.
 QuoteFactory/CMakeFiles/QuoteFactory.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f QuoteFactory/CMakeFiles/QuoteFactory.dir/build.make QuoteFactory/CMakeFiles/QuoteFactory.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=9 "Finished codegen for target QuoteFactory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Finished codegen for target QuoteFactory"
 .PHONY : QuoteFactory/CMakeFiles/QuoteFactory.dir/codegen
 
 # clean rule for target.
@@ -1870,12 +1893,12 @@ QuoteFactory/CMakeFiles/QuoteFactory.dir/clean:
 WtBtCore/CMakeFiles/WtBtCore.dir/all:
 	$(MAKE) $(MAKESILENT) -f WtBtCore/CMakeFiles/WtBtCore.dir/build.make WtBtCore/CMakeFiles/WtBtCore.dir/depend
 	$(MAKE) $(MAKESILENT) -f WtBtCore/CMakeFiles/WtBtCore.dir/build.make WtBtCore/CMakeFiles/WtBtCore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=52,53,54 "Built target WtBtCore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=51,52,53,54 "Built target WtBtCore"
 .PHONY : WtBtCore/CMakeFiles/WtBtCore.dir/all
 
 # Build rule for subdir invocation for target.
 WtBtCore/CMakeFiles/WtBtCore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtBtCore/CMakeFiles/WtBtCore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtBtCore/CMakeFiles/WtBtCore.dir/rule
@@ -1887,7 +1910,7 @@ WtBtCore: WtBtCore/CMakeFiles/WtBtCore.dir/rule
 # codegen rule for target.
 WtBtCore/CMakeFiles/WtBtCore.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WtBtCore/CMakeFiles/WtBtCore.dir/build.make WtBtCore/CMakeFiles/WtBtCore.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=52,53,54 "Finished codegen for target WtBtCore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=51,52,53,54 "Finished codegen for target WtBtCore"
 .PHONY : WtBtCore/CMakeFiles/WtBtCore.dir/codegen
 
 # clean rule for target.
@@ -1909,7 +1932,7 @@ WtBtPorter/CMakeFiles/WtBtPorter.dir/all: WtBtCore/CMakeFiles/WtBtCore.dir/all
 
 # Build rule for subdir invocation for target.
 WtBtPorter/CMakeFiles/WtBtPorter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 31
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtBtPorter/CMakeFiles/WtBtPorter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtBtPorter/CMakeFiles/WtBtPorter.dir/rule
@@ -1943,7 +1966,7 @@ WtBtRunner/CMakeFiles/WtBtRunner.dir/all: WtBtCore/CMakeFiles/WtBtCore.dir/all
 
 # Build rule for subdir invocation for target.
 WtBtRunner/CMakeFiles/WtBtRunner.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 30
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtBtRunner/CMakeFiles/WtBtRunner.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtBtRunner/CMakeFiles/WtBtRunner.dir/rule
@@ -2098,12 +2121,12 @@ TraderCTPOpt/CMakeFiles/TraderCTPOpt.dir/clean:
 TraderFemas/CMakeFiles/TraderFemas.dir/all:
 	$(MAKE) $(MAKESILENT) -f TraderFemas/CMakeFiles/TraderFemas.dir/build.make TraderFemas/CMakeFiles/TraderFemas.dir/depend
 	$(MAKE) $(MAKESILENT) -f TraderFemas/CMakeFiles/TraderFemas.dir/build.make TraderFemas/CMakeFiles/TraderFemas.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=24 "Built target TraderFemas"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Built target TraderFemas"
 .PHONY : TraderFemas/CMakeFiles/TraderFemas.dir/all
 
 # Build rule for subdir invocation for target.
 TraderFemas/CMakeFiles/TraderFemas.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TraderFemas/CMakeFiles/TraderFemas.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : TraderFemas/CMakeFiles/TraderFemas.dir/rule
@@ -2115,7 +2138,7 @@ TraderFemas: TraderFemas/CMakeFiles/TraderFemas.dir/rule
 # codegen rule for target.
 TraderFemas/CMakeFiles/TraderFemas.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f TraderFemas/CMakeFiles/TraderFemas.dir/build.make TraderFemas/CMakeFiles/TraderFemas.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=24 "Finished codegen for target TraderFemas"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Finished codegen for target TraderFemas"
 .PHONY : TraderFemas/CMakeFiles/TraderFemas.dir/codegen
 
 # clean rule for target.
@@ -2130,12 +2153,12 @@ TraderFemas/CMakeFiles/TraderFemas.dir/clean:
 TraderMocker/CMakeFiles/TraderMocker.dir/all:
 	$(MAKE) $(MAKESILENT) -f TraderMocker/CMakeFiles/TraderMocker.dir/build.make TraderMocker/CMakeFiles/TraderMocker.dir/depend
 	$(MAKE) $(MAKESILENT) -f TraderMocker/CMakeFiles/TraderMocker.dir/build.make TraderMocker/CMakeFiles/TraderMocker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Built target TraderMocker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=24 "Built target TraderMocker"
 .PHONY : TraderMocker/CMakeFiles/TraderMocker.dir/all
 
 # Build rule for subdir invocation for target.
 TraderMocker/CMakeFiles/TraderMocker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TraderMocker/CMakeFiles/TraderMocker.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : TraderMocker/CMakeFiles/TraderMocker.dir/rule
@@ -2147,7 +2170,7 @@ TraderMocker: TraderMocker/CMakeFiles/TraderMocker.dir/rule
 # codegen rule for target.
 TraderMocker/CMakeFiles/TraderMocker.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f TraderMocker/CMakeFiles/TraderMocker.dir/build.make TraderMocker/CMakeFiles/TraderMocker.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Finished codegen for target TraderMocker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=24 "Finished codegen for target TraderMocker"
 .PHONY : TraderMocker/CMakeFiles/TraderMocker.dir/codegen
 
 # clean rule for target.
@@ -2194,12 +2217,12 @@ TraderXTP/CMakeFiles/TraderXTP.dir/clean:
 TraderYD/CMakeFiles/TraderYD.dir/all:
 	$(MAKE) $(MAKESILENT) -f TraderYD/CMakeFiles/TraderYD.dir/build.make TraderYD/CMakeFiles/TraderYD.dir/depend
 	$(MAKE) $(MAKESILENT) -f TraderYD/CMakeFiles/TraderYD.dir/build.make TraderYD/CMakeFiles/TraderYD.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=26 "Built target TraderYD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Built target TraderYD"
 .PHONY : TraderYD/CMakeFiles/TraderYD.dir/all
 
 # Build rule for subdir invocation for target.
 TraderYD/CMakeFiles/TraderYD.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TraderYD/CMakeFiles/TraderYD.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : TraderYD/CMakeFiles/TraderYD.dir/rule
@@ -2211,13 +2234,45 @@ TraderYD: TraderYD/CMakeFiles/TraderYD.dir/rule
 # codegen rule for target.
 TraderYD/CMakeFiles/TraderYD.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f TraderYD/CMakeFiles/TraderYD.dir/build.make TraderYD/CMakeFiles/TraderYD.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=26 "Finished codegen for target TraderYD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Finished codegen for target TraderYD"
 .PHONY : TraderYD/CMakeFiles/TraderYD.dir/codegen
 
 # clean rule for target.
 TraderYD/CMakeFiles/TraderYD.dir/clean:
 	$(MAKE) $(MAKESILENT) -f TraderYD/CMakeFiles/TraderYD.dir/build.make TraderYD/CMakeFiles/TraderYD.dir/clean
 .PHONY : TraderYD/CMakeFiles/TraderYD.dir/clean
+
+#=============================================================================
+# Target rules for target WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir
+
+# All Build rule for target.
+WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/all:
+	$(MAKE) $(MAKESILENT) -f WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/build.make WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/depend
+	$(MAKE) $(MAKESILENT) -f WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/build.make WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=68 "Built target WtCtaStraFact"
+.PHONY : WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/all
+
+# Build rule for subdir invocation for target.
+WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
+.PHONY : WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/rule
+
+# Convenience name for target.
+WtCtaStraFact: WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/rule
+.PHONY : WtCtaStraFact
+
+# codegen rule for target.
+WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/build.make WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=68 "Finished codegen for target WtCtaStraFact"
+.PHONY : WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/codegen
+
+# clean rule for target.
+WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/clean:
+	$(MAKE) $(MAKESILENT) -f WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/build.make WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/clean
+.PHONY : WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/clean
 
 #=============================================================================
 # Target rules for target WtExeFact/CMakeFiles/WtExeFact.dir
@@ -2322,12 +2377,12 @@ WtMsgQue/CMakeFiles/WtMsgQue.dir/clean:
 WtCore/CMakeFiles/WtCore.dir/all:
 	$(MAKE) $(MAKESILENT) -f WtCore/CMakeFiles/WtCore.dir/build.make WtCore/CMakeFiles/WtCore.dir/depend
 	$(MAKE) $(MAKESILENT) -f WtCore/CMakeFiles/WtCore.dir/build.make WtCore/CMakeFiles/WtCore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=58,59,60,61,62,63,64,65,66,67,68 "Built target WtCore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=58,59,60,61,62,63,64,65,66,67 "Built target WtCore"
 .PHONY : WtCore/CMakeFiles/WtCore.dir/all
 
 # Build rule for subdir invocation for target.
 WtCore/CMakeFiles/WtCore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtCore/CMakeFiles/WtCore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtCore/CMakeFiles/WtCore.dir/rule
@@ -2339,7 +2394,7 @@ WtCore: WtCore/CMakeFiles/WtCore.dir/rule
 # codegen rule for target.
 WtCore/CMakeFiles/WtCore.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WtCore/CMakeFiles/WtCore.dir/build.make WtCore/CMakeFiles/WtCore.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=58,59,60,61,62,63,64,65,66,67,68 "Finished codegen for target WtCore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=58,59,60,61,62,63,64,65,66,67 "Finished codegen for target WtCore"
 .PHONY : WtCore/CMakeFiles/WtCore.dir/codegen
 
 # clean rule for target.
@@ -2361,7 +2416,7 @@ WtPorter/CMakeFiles/WtPorter.dir/all: WtCore/CMakeFiles/WtCore.dir/all
 
 # Build rule for subdir invocation for target.
 WtPorter/CMakeFiles/WtPorter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 39
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 38
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtPorter/CMakeFiles/WtPorter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtPorter/CMakeFiles/WtPorter.dir/rule
@@ -2390,7 +2445,7 @@ WtExecMon/CMakeFiles/WtExecMon.dir/all: WTSTools/CMakeFiles/WTSTools.dir/all
 WtExecMon/CMakeFiles/WtExecMon.dir/all: WtCore/CMakeFiles/WtCore.dir/all
 	$(MAKE) $(MAKESILENT) -f WtExecMon/CMakeFiles/WtExecMon.dir/build.make WtExecMon/CMakeFiles/WtExecMon.dir/depend
 	$(MAKE) $(MAKESILENT) -f WtExecMon/CMakeFiles/WtExecMon.dir/build.make WtExecMon/CMakeFiles/WtExecMon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=83 "Built target WtExecMon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=83,84 "Built target WtExecMon"
 .PHONY : WtExecMon/CMakeFiles/WtExecMon.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2407,7 +2462,7 @@ WtExecMon: WtExecMon/CMakeFiles/WtExecMon.dir/rule
 # codegen rule for target.
 WtExecMon/CMakeFiles/WtExecMon.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WtExecMon/CMakeFiles/WtExecMon.dir/build.make WtExecMon/CMakeFiles/WtExecMon.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=83 "Finished codegen for target WtExecMon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=83,84 "Finished codegen for target WtExecMon"
 .PHONY : WtExecMon/CMakeFiles/WtExecMon.dir/codegen
 
 # clean rule for target.
@@ -2429,7 +2484,7 @@ WtRunner/CMakeFiles/WtRunner.dir/all: WtCore/CMakeFiles/WtCore.dir/all
 
 # Build rule for subdir invocation for target.
 WtRunner/CMakeFiles/WtRunner.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtRunner/CMakeFiles/WtRunner.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtRunner/CMakeFiles/WtRunner.dir/rule
@@ -2621,12 +2676,12 @@ WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/all: WTSTools/CMakeFiles/WTSTools.dir/a
 WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/all: WtCore/CMakeFiles/WtCore.dir/all
 	$(MAKE) $(MAKESILENT) -f WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/build.make WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/depend
 	$(MAKE) $(MAKESILENT) -f WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/build.make WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=84 "Built target WtLatencyHFT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=85 "Built target WtLatencyHFT"
 .PHONY : WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/all
 
 # Build rule for subdir invocation for target.
 WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/rule
@@ -2638,7 +2693,7 @@ WtLatencyHFT: WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/rule
 # codegen rule for target.
 WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/build.make WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=84 "Finished codegen for target WtLatencyHFT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=85 "Finished codegen for target WtLatencyHFT"
 .PHONY : WtLatencyHFT/CMakeFiles/WtLatencyHFT.dir/codegen
 
 # clean rule for target.
@@ -2656,12 +2711,12 @@ WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/all: WtShareHelper/CMakeFiles/WtShareHe
 WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/all: WtUftCore/CMakeFiles/WtUftCore.dir/all
 	$(MAKE) $(MAKESILENT) -f WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/build.make WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/depend
 	$(MAKE) $(MAKESILENT) -f WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/build.make WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=85,86 "Built target WtLatencyUFT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=86 "Built target WtLatencyUFT"
 .PHONY : WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/all
 
 # Build rule for subdir invocation for target.
 WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 31
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/rule
@@ -2673,7 +2728,7 @@ WtLatencyUFT: WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/rule
 # codegen rule for target.
 WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/build.make WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=85,86 "Finished codegen for target WtLatencyUFT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=86 "Finished codegen for target WtLatencyUFT"
 .PHONY : WtLatencyUFT/CMakeFiles/WtLatencyUFT.dir/codegen
 
 # clean rule for target.
@@ -2691,12 +2746,12 @@ TestBtPorter/CMakeFiles/TestBtPorter.dir/all: WtBtCore/CMakeFiles/WtBtCore.dir/a
 TestBtPorter/CMakeFiles/TestBtPorter.dir/all: WtBtPorter/CMakeFiles/WtBtPorter.dir/all
 	$(MAKE) $(MAKESILENT) -f TestBtPorter/CMakeFiles/TestBtPorter.dir/build.make TestBtPorter/CMakeFiles/TestBtPorter.dir/depend
 	$(MAKE) $(MAKESILENT) -f TestBtPorter/CMakeFiles/TestBtPorter.dir/build.make TestBtPorter/CMakeFiles/TestBtPorter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Built target TestBtPorter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=9 "Built target TestBtPorter"
 .PHONY : TestBtPorter/CMakeFiles/TestBtPorter.dir/all
 
 # Build rule for subdir invocation for target.
 TestBtPorter/CMakeFiles/TestBtPorter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 32
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestBtPorter/CMakeFiles/TestBtPorter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : TestBtPorter/CMakeFiles/TestBtPorter.dir/rule
@@ -2708,7 +2763,7 @@ TestBtPorter: TestBtPorter/CMakeFiles/TestBtPorter.dir/rule
 # codegen rule for target.
 TestBtPorter/CMakeFiles/TestBtPorter.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f TestBtPorter/CMakeFiles/TestBtPorter.dir/build.make TestBtPorter/CMakeFiles/TestBtPorter.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num= "Finished codegen for target TestBtPorter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bytedance/quantization/wondertrader/build/CMakeFiles --progress-num=9 "Finished codegen for target TestBtPorter"
 .PHONY : TestBtPorter/CMakeFiles/TestBtPorter.dir/codegen
 
 # clean rule for target.
@@ -2802,7 +2857,7 @@ TestPorter/CMakeFiles/TestPorter.dir/all: WtPorter/CMakeFiles/WtPorter.dir/all
 
 # Build rule for subdir invocation for target.
 TestPorter/CMakeFiles/TestPorter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 40
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 39
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestPorter/CMakeFiles/TestPorter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/quantization/wondertrader/build/CMakeFiles 0
 .PHONY : TestPorter/CMakeFiles/TestPorter.dir/rule

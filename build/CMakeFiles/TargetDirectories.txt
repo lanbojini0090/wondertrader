@@ -90,6 +90,9 @@
 /Users/bytedance/quantization/wondertrader/build/TraderYD/CMakeFiles/TraderYD.dir
 /Users/bytedance/quantization/wondertrader/build/TraderYD/CMakeFiles/edit_cache.dir
 /Users/bytedance/quantization/wondertrader/build/TraderYD/CMakeFiles/rebuild_cache.dir
+/Users/bytedance/quantization/wondertrader/build/WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir
+/Users/bytedance/quantization/wondertrader/build/WtCtaStraFact/CMakeFiles/edit_cache.dir
+/Users/bytedance/quantization/wondertrader/build/WtCtaStraFact/CMakeFiles/rebuild_cache.dir
 /Users/bytedance/quantization/wondertrader/build/WtExeFact/CMakeFiles/WtExeFact.dir
 /Users/bytedance/quantization/wondertrader/build/WtExeFact/CMakeFiles/edit_cache.dir
 /Users/bytedance/quantization/wondertrader/build/WtExeFact/CMakeFiles/rebuild_cache.dir

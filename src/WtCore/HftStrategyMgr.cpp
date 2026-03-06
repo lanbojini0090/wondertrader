@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * \file HftStrategyMgr.cpp
  * \project	WonderTrader
  *
@@ -46,8 +46,13 @@ bool HftStrategyMgr::loadFactories(const char* path)
 		if (iter->path().extension() != ".dll")
 			continue;
 #else //_UNIX
+#ifdef __APPLE__
+		if (iter->path().extension() != ".dylib")
+			continue;
+#else
 		if (iter->path().extension() != ".so")
 			continue;
+#endif
 #endif
 
 		DllHandle hInst = DLLHelper::load_library(iter->path().string().c_str());

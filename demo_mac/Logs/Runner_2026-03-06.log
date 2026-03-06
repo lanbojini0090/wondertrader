@@ -1,0 +1,44 @@
+[2026.03.06 16:38:52 - info ] Commodities configuration file common/commodities.json loaded
+[2026.03.06 16:38:52 - info ] Contracts configuration file common/contracts.json loaded, 5 exchanges
+[2026.03.06 16:38:52 - info ] Trading enviroment initialzied with engine: CTA
+[2026.03.06 16:38:52 - info ] Running mode: Production
+[2026.03.06 16:38:52 - info ] 0 fee templates loaded
+[2026.03.06 16:38:52 - info ] [RiskControl] Params inited, Checking frequency: 5 s, MaxIDD: ON(20.00%), MaxMDD: OFF(60.00%), Capital: 5000000.0, Profit Boudary: 101.00%, Calc Span: 30 mins, Risk Scale: 0.30
+[2026.03.06 16:38:52 - info ] Engine task poolsize is 0
+[2026.03.06 16:38:52 - info ] Resampled bars will be aligned by section:  no
+[2026.03.06 16:38:52 - info ] Force to cache bars:  no
+[2026.03.06 16:38:52 - info ] WtDataReader initialized, rt dir is ../FUT_Data/rt/, hist dir is ../FUT_Data/his/, adjust_flag is 0
+[2026.03.06 16:38:52 - info ] No adjusting factor file configured, loading skipped
+[2026.03.06 16:38:52 - info ] Data manager initialized
+[2026.03.06 16:38:52 - info ] Reading parser config from tdparsers.yaml...
+[2026.03.06 16:38:53 - info ] [parser1] Parser module /Users/bytedance/quantization/wondertrader/demo_mac/parsers/libParserUDP.dylib loaded
+[2026.03.06 16:38:53 - info ] [parser1] Parser initialzied, check_time: false
+[2026.03.06 16:38:53 - info ] 1 parsers loaded
+[2026.03.06 16:38:53 - info ] Reading trader config from tdtraders.yaml...
+[2026.03.06 16:38:53 - warning] [mocker] No risk control rule setup of trading channel
+[2026.03.06 16:38:53 - info ] [mocker] Trader module /Users/bytedance/quantization/wondertrader/demo_mac/traders/libTraderMocker.dylib loaded
+[2026.03.06 16:38:53 - info ] 1 traders loaded
+[2026.03.06 16:38:53 - info ] Reading executer config from executers.yaml...
+[2026.03.06 16:38:53 - error] Directory /Users/bytedance/quantization/wondertrader/demo_mac/executer/ of executer factory not exists
+[2026.03.06 16:38:53 - info ] 0 executers loaded
+[2026.03.06 16:38:53 - info ] CTA strategy factory[WtCtaStraFact] loaded
+[2026.03.06 16:38:53 - info ] 1 CTA strategy factories in directory[/Users/bytedance/quantization/wondertrader/demo_mac/cta/] loaded
+[2026.03.06 16:38:53 - info ] 1 parsers started
+[2026.03.06 16:38:53 - info ] 1 trading channels started
+[2026.03.06 16:38:53 - info ] CtaTicker will drive engine with session TRADING
+[2026.03.06 16:38:53 - info ] [mocker] Trader login succeed, trading date: 20260306
+[2026.03.06 16:38:53 - info ] [mocker] Position data updated
+[2026.03.06 16:38:53 - info ] Trading date confirmed: 20260306
+[2026.03.06 16:38:53 - info ] [mocker] Trading channel ready
+[2026.03.06 16:38:53 - info ] Market data subscribed: CFFEX.rb.HOT
+[2026.03.06 16:38:53 - debug] Main KBars confirmed: CFFEX.rb.HOT#m1
+[2026.03.06 16:38:53 - info ] Trading day 20260306 begun
+[2026.03.06 16:38:59 - error] app discard signal 28
+[2026.03.06 16:38:59 - error] app discard signal 28
+[2026.03.06 16:38:59 - error] app discard signal 28
+[2026.03.06 16:38:59 - error] app discard signal 28
+[2026.03.06 16:38:59 - error] app discard signal 28
+[2026.03.06 16:38:59 - error] app discard signal 28
+[2026.03.06 16:38:59 - error] app discard signal 28
+[2026.03.06 16:39:23 - error] app interrupted
+[2026.03.06 16:39:23 - info ] Exit flag is true

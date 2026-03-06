@@ -1,0 +1,5 @@
+[2026.03.06 16:38:53 - warning] [mocker] No risk control rule setup of trading channel
+[2026.03.06 16:38:53 - info ] [mocker] Trader module /Users/bytedance/quantization/wondertrader/demo_mac/traders/libTraderMocker.dylib loaded
+[2026.03.06 16:38:53 - info ] [mocker] Trader login succeed, trading date: 20260306
+[2026.03.06 16:38:53 - info ] [mocker] Position data updated
+[2026.03.06 16:38:53 - info ] [mocker] Trading channel ready

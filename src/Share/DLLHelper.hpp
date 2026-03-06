@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * \file DLLHelper.hpp
  * \project	WonderTrader
  *
@@ -79,7 +79,11 @@ public:
 		std::string ret(name, idx);
 		ret.append(unixPrefix);
 		ret.append(name + idx);
+#ifdef __APPLE__
+		ret += ".dylib";
+#else
 		ret += ".so";
+#endif
 		return std::move(ret);
 #endif
 	}

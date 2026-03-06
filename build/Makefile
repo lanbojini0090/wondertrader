@@ -507,6 +507,19 @@ TraderYD/fast:
 .PHONY : TraderYD/fast
 
 #=============================================================================
+# Target rules for targets named WtCtaStraFact
+
+# Build rule for target.
+WtCtaStraFact: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WtCtaStraFact
+.PHONY : WtCtaStraFact
+
+# fast build rule for target.
+WtCtaStraFact/fast:
+	$(MAKE) $(MAKESILENT) -f WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/build.make WtCtaStraFact/CMakeFiles/WtCtaStraFact.dir/build
+.PHONY : WtCtaStraFact/fast
+
+#=============================================================================
 # Target rules for targets named WtExeFact
 
 # Build rule for target.
@@ -820,6 +833,7 @@ help:
 	@echo "... WtBtPorter"
 	@echo "... WtBtRunner"
 	@echo "... WtCore"
+	@echo "... WtCtaStraFact"
 	@echo "... WtDataStorage"
 	@echo "... WtDataStorageAD"
 	@echo "... WtDtCore"

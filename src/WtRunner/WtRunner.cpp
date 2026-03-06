@@ -582,10 +582,10 @@ void WtRunner::run(bool bAsync /* = false */)
 {
 	try
 	{
-		_parsers.run();
-		_traders.run();
+		_parsers.run();   // 启动行情通道
+		_traders.run();   // 启动所有交易通道
 
-		_engine->run();
+		_engine->run();    // 启动核心引擎
 
 		if(!bAsync)
 		{

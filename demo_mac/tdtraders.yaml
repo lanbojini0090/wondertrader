@@ -1,0 +1,5 @@
+traders:
+-   active: true
+    id: mocker
+    module: TraderMocker
+    savedata: true

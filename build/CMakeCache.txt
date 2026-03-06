@@ -568,6 +568,18 @@ WtCore_IS_TOP_LEVEL:STATIC=OFF
 WtCore_SOURCE_DIR:STATIC=/Users/bytedance/quantization/wondertrader/src/WtCore
 
 //Value Computed by CMake
+WtCtaStraFact_BINARY_DIR:STATIC=/Users/bytedance/quantization/wondertrader/build/WtCtaStraFact
+
+//Value Computed by CMake
+WtCtaStraFact_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+WtCtaStraFact_LIB_DEPENDS:STATIC=general;boost_filesystem;general;dl;
+
+//Value Computed by CMake
+WtCtaStraFact_SOURCE_DIR:STATIC=/Users/bytedance/quantization/wondertrader/src/WtCtaStraFact
+
+//Value Computed by CMake
 WtDataStorageAD_BINARY_DIR:STATIC=/Users/bytedance/quantization/wondertrader/build/WtDataStorageAD
 
 //Value Computed by CMake
@@ -867,7 +879,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=52
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=53
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

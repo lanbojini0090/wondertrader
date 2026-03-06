@@ -1,4 +1,4 @@
-﻿#include "WtExecuterFactory.h"
+#include "WtExecuterFactory.h"
 
 #include "../Share/StdUtils.hpp"
 #include "../Share/StrUtil.hpp"
@@ -30,8 +30,13 @@ bool WtExecuterFactory::loadFactories(const char* path)
 		if (iter->path().extension() != ".dll")
 			continue;
 #else //_UNIX
+#ifdef __APPLE__
+		if (iter->path().extension() != ".dylib")
+			continue;
+#else
 		if (iter->path().extension() != ".so")
 			continue;
+#endif
 #endif
 
 		const std::string& path = iter->path().string();
